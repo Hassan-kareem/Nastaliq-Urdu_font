@@ -29,6 +29,9 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 ### Good News! Say goodbye to font issues like this 👇
 
 ![Font Issue](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/85930501-fab5-4e85-b2e5-55592639ff14)
+
+### Links
+<a href="https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/"><b>XDA Thread</b></a>
 ### Credits
 
 Me (Hassan Karim)
