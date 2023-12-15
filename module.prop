@@ -1,7 +1,7 @@
-id=Nastaliq-Urdu
-name=Nastaliq Urdu with Kasheeda
+id=Nastaliq-Urdu_Regular
+name=Nastaliq Urdu with Regular
 version=1
 versionCode=1
 author=Hassan-karim
-description=Jameel Noori Nastaliq with Kasheeda for Urdu language
+description=Jameel Noori Nastaliq for Urdu language
 minMagisk=20400
