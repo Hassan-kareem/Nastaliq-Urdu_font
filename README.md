@@ -1,11 +1,12 @@
 # Nastaliq Urdu
 [![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Kasheeda/total.svg?color=green&label=Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Kasheeda)
+[![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Kasheeda/total.svg?color=green&label=v2-Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Kasheeda)
 ## Jameel Noori Nastaliq Font Module for Urdu Users
 
 Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
-*Tested on LineageOS 20, it will work on every Android 12 and later device, including <b>OneUI, OxygenOS, and MIUI</b>. Support for Android 11 and earlier will be added, Insha Allah.*
-* Trying to create a module that can be used without <b>Magisk</b>(Root), Using <b>custom recovery</b>.
+*Tested on LineageOS 20, it will work on every Android device, including <b>OneUI, OxygenOS, and MIUI</b>.*
+* If you want to use it on Non-Rooted Device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted">Here</a>
 ### Installation
 
 1. Download: Obtain the latest zip from [Release](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases)
@@ -18,7 +19,11 @@ Note: Choose between two variants: <b>Kasheeda</b> and <b>Regular</b>. The Kashe
 1. Go to `Settings > Languages and input > Languages`.
 2. Add Urdu language.
 Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu on your Android device!
-
+### Changelog
+#### v2
+* Add support for Android 11 and earlier
+#### v1
+* Initial Release
 ### Screenshots
 
 * Kasheeda Variant <br> ![Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/245c7e76-07dc-4d4a-80c8-e8ab4a555b3d) <!-- Describing Kasheeda Variant -->
