@@ -1,6 +1,6 @@
 # Nastaliq Urdu
 [![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Regular/total.svg?&label=Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Regular)
-[![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Regular/total.svg?&label=Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Regular)
+[![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Regular-v2/total.svg?&label=v2-Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Regular-v2)
 ## Jameel Noori Nastaliq Font Module for Urdu Users
 
 Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
@@ -9,7 +9,7 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
 * If you want to use it on Non-Rooted Device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted">Here</a>
 ### Installation
 
-1. Download: Obtain the latest zip from Releases [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases)
+1. Download: Obtain the latest zip from Releases [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v2/Nastaliq-Urdu_Regular-v2.zip)
 2. Flash: Install the downloaded file using Magisk or KernelSU.
 
 Note: Choose between two variants: <b>Kasheeda</b> and <b>Regular</b>. The Kasheeda Variant utilizes the Kasheeda font for bold text, while the Regular variant uses the Bold font.
