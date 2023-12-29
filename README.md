@@ -5,7 +5,8 @@
 ## Jameel Noori Nastaleeq Font for Urdu Users
 Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
-* It will work on every Android device, including <b>OneUI, OxygenOS, FuntouchOS, and MIUI</b>. If you have a rooted device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font">here</a>.
+* It will work on every Android device, including <b>OneUI, OxygenOS, FuntouchOS, and MIUI</b>.
+  * If you have a rooted device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font">here</a>.
 
 ### Installation
 1. **Download:** Obtain the latest zip from releases: [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip). Then unzip it.
