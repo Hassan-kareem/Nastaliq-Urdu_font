@@ -1,7 +1,5 @@
 # Nastaliq Urdu
-[![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Kasheeda/total.svg?color=green&label=Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Kasheeda)
-[![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/Noori-Kasheeda-v2/total.svg?color=green&label=v2-Downloads&query=totalString)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/Noori-Kasheeda-v2)
-## Jameel Noori Nastaliq Font Module for Urdu Users
+### Jameel Noori Nastaliq Font Module for Urdu Users
 
 Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
