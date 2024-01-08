@@ -17,7 +17,7 @@ Noto Nastaliq Urdu brings the elegance of traditional calligraphy to your Androi
 Use The Noto Nastaliq Urdu Font module, enjoy the beauty and convenience of Urdu on your Android device!
 ### Screenshots
 
-* Kasheeda Variant <br> ![Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/245c7e76-07dc-4d4a-80c8-e8ab4a555b3d) <!-- Describing Kasheeda Variant -->
+* Noto Nastaliq Urdu <br> ![NotoNastaliqUrduFixed](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/58dcd183-9e4c-4f58-8760-2c6b9b06a38f) <!-- Describing Kasheeda Variant -->
 
 ### Good News! Say goodbye to font issues like this 👇
 
@@ -28,3 +28,4 @@ XDA Thread <a href="https://xdaforums.com/t/module-font-nastaliq-urdu-font.46457
 ### Credits
 
 Me (Hassan Karim)
+
