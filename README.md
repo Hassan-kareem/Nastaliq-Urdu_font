@@ -7,6 +7,12 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
   * If you have a rooted device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font">here</a>.
 
 ### Installation
+
+[![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
+[![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip)
+[![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip)
+[![XDA Thread](https://img.shields.io/badge/XDA%20Thread-Visit%20Now-green?style=plastic)](https://xdaforums.com/t/font-nastaliq-urdu-for-android.4647453/)
+
 1. **Download:** Obtain the latest zip from releases: [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip). Then unzip it.
 2. **Install:** Install the downloaded .ttf file using [zFont](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2) app.
    * You can search on YouTube <b>How to install custom font on "Your device or brand name"</b>.
