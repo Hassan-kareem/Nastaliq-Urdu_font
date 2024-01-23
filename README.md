@@ -43,6 +43,8 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 ## Screenshots
 
 * Kasheeda Variant <br> ![Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/245c7e76-07dc-4d4a-80c8-e8ab4a555b3d) <!-- Describing Kasheeda Variant -->
+* Noto Nastaliq Urdu <br>
+![NotoNastaliqUrdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/027aa95a-1913-400b-a99e-352ac280c858)
 
 * Regular Variant <br>
 ![Regular png](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/b4af05c4-7751-41e0-9b10-39f43aff8428) <!-- Describing Regular Variant -->
