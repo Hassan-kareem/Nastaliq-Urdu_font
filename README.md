@@ -2,7 +2,7 @@
 
 ## Noto Nastaliq Font Module for Urdu Users
 
-* Tested on LineageOS 20, it will work on every Android device that has secondary and primary language options. Watch the [video](https://youtu.be/2xI-Kagl1yI?si=ja5x8huKUiWJnF9J&t=46) to learn how to check, including OneUI, OxygenOS, and all AOSP-based ROMs.
+* Tested on Android 7 and 13,14, it will work on every Android device that has secondary and primary language options. Watch the [video](https://youtu.be/2xI-Kagl1yI?si=ja5x8huKUiWJnF9J&t=46) to learn how to check, including OneUI, OxygenOS, and all AOSP-based ROMs.
 
 > [!Important]
 >
