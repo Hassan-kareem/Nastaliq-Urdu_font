@@ -11,9 +11,10 @@
 ## Installation
 
 [![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
-[![Download Noto Nastaliq Urdu](https://img.shields.io/badge/Download-Noto%20Nastaliq%20Urdu-orange?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v1/NotoNastaliqUrdu-v1.zip)
-[![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v2/Nastaliq-Urdu_Kasheeda-v2.zip)
-[![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v2/Nastaliq-Urdu_Regular-v2.zip)
+[![Download Noto Nastaliq Urdu](https://img.shields.io/badge/Download-Noto%20Nastaliq%20Urdu-orange?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v2/NotoNastaliqUrdu-v2.zip)
+[![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v3/Nastaliq-Urdu_Kasheeda-v3.zip)
+[![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v3/Nastaliq-Urdu_Regular-v3.zip)
+[![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-dark?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq/Mehr_Nastaliq-v1.zip)
 [![XDA Thread](https://img.shields.io/badge/XDA%20Thread-Visit%20Now-green?style=plastic)](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)
 
 1. **Download:** Obtain the latest zip from Releases: [Noto Nastaliq Urdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v1/NotoNastaliqUrdu-v1.zip).
