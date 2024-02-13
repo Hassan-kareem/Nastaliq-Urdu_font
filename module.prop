@@ -1,7 +1,7 @@
-id=NotoNastaliqUrdu
-name=Noto Nastaliq Urdu
-version=2
-versionCode=120
+id=MehrNastaliq
+name=Mehr Nastaliq Urdu
+version=1.0
+versionCode=100
 author=Hassan-karim
-description=Noto Nastaliq Urdu Font for Urdu language
-minMagisk=20400
+description=Mehr Nastaliq Urdu Font for Urdu
+updateJson=https://raw.githubusercontent.com/Hassan-kareem/Nastaliq-Urdu_font/MehrNastaliq/update.json
