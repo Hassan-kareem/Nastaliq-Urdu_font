@@ -39,6 +39,9 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 * Noto Nastaliq Urdu <br>
 ![NotoNastaliqUrdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/027aa95a-1913-400b-a99e-352ac280c858)
 
+* Mehr Nastaliq Urdu <br>
+![MehrNastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/b9e12b4f-f193-4bd6-85ee-853c15679458)
+
 * Regular Variant <br>
 ![Regular png](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/b4af05c4-7751-41e0-9b10-39f43aff8428) <!-- Describing Regular Variant -->
 
