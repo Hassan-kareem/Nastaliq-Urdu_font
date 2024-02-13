@@ -1,8 +1,8 @@
 # Nastaliq Urdu
 
-## Jameel Noori Nastaliq Font Module for Urdu Users
+## Nastaliq Font Module for Urdu Users
 
-Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
+Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
 * Tested on Android 7 and 13,14, it will work on every Android device that has secondary and primary language options. Watch the [video](https://youtu.be/2xI-Kagl1yI?si=ja5x8huKUiWJnF9J&t=46) to learn how to check, including OneUI, OxygenOS, and all AOSP-based ROMs.
 
@@ -32,14 +32,6 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
 1. Go to `Settings > Languages and input > Languages`.
 2. Add Urdu language.
 Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu on your Android device!
-
-## Changelog
-
-### v2
-* Add support for Android 11 and earlier
-
-### v1
-* Initial Release
 
 ## Screenshots
 
