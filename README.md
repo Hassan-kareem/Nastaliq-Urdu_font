@@ -19,7 +19,7 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
 [![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-dark?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v1/Mehr_Nastaliq-Urdu-v1.zip)
 [![XDA Thread](https://img.shields.io/badge/XDA%20Thread-Visit%20Now-green?style=plastic)](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)
 
-1. **Download:** Obtain the latest zip from Releases: [Noto Nastaliq Urdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v2/NotoNastaliqUrdu-v2.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v3/Nastaliq-Urdu_Kasheeda-v3.zip) or [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v3/Nastaliq-Urdu_Regular-v2.zip), [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq/Mehr_Nastaliq-v1.zip)
+1. **Download:** Obtain the latest zip from Releases: [Noto Nastaliq Urdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v2/NotoNastaliqUrdu-v2.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v3/Nastaliq-Urdu_Kasheeda-v3.zip) or [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v3/Nastaliq-Urdu_Regular-v2.zip), [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v1/Mehr_Nastaliq-Urdu-v1.zip)
 2. **Flash:** Install the downloaded file using Magisk or KernelSU.
 
 > [!NOTE]
