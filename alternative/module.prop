@@ -4,4 +4,4 @@ version=1.0
 versionCode=60
 author=Hassan-karim
 description=Mehr Nastaliq Urdu Alt Font for Urdu language
-updateJson=https://github.com/Hassan-kareem/test/blob/main/update.json
+updateJson=https://raw.githubusercontent.com/Hassan-kareem/Nastaliq-Urdu_font/MehrNastaliq/alternative/update.json
