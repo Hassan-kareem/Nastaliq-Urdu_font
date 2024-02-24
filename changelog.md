@@ -1,7 +1,7 @@
-We have a Telegram group!
-If you want to join, use the following link:
+I have a YouTube Channel!
+If you have any questions, use the following link to comment:
 
-https://t.me/HassansTechInsights
+https://www.youtube.com/@HassansTechInsights
 
-# v4
+# v2
 - Increased font size by default
