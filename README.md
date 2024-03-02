@@ -20,6 +20,8 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
 
 #### Note: Choose between two variants: Kasheeda and Regular. See the Screenshots below. <br>
 * Regular <br>
-![Non-Rooted_Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/9a141fe2-d493-4468-bd2b-bb4dd8701c74)
+![Noori-Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/24788da3-db60-4dc2-99f2-8f3d09e7117c)
+
 * Kasheeda <br>
-![Kasheeeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/a6fc6d80-db48-4242-8aba-c6f8387df789)
+![Noori-Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/ad76f39c-23c0-435f-b166-5fa48cdb1994)
+
