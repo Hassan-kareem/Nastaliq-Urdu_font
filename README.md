@@ -7,7 +7,7 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
   * If you have a rooted device, click <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font">here</a>.
 
 ### Installation
-
+![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/total.svg?style=plastic&label=Downloads)
 [![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
 [![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip)
 [![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip)
