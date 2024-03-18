@@ -11,7 +11,7 @@ Nastaliq brings the elegance of traditional calligraphy to your Android device w
 > If you want to use it on a Non-Rooted Device, click [here](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted)
 
 ## Installation
-
+![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/total.svg?style=plastic&label=Downloads)
 [![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
 [![Download Noto Nastaliq Urdu](https://img.shields.io/badge/Download-Noto%20Nastaliq%20Urdu-orange?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v2/NotoNastaliqUrdu-v2.zip)
 [![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v4/Nastaliq-Urdu_Kasheeda-v4.zip)
