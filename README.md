@@ -1,6 +1,7 @@
 # Nastaliq Urdu
+![Urdu Banner](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/a9b355df-e1f5-49ee-92ec-91a9be99aa38)
 
-## Nastaliq Font Module for Urdu Users
+## Nastaleeq Font Module for Urdu Users
 
 Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
