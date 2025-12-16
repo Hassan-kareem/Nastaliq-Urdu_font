@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<title>Nastaliq Urdu Font for Android</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0b10;
+    --card:#16161c;
+    --text:#f1f1f1;
+    --muted:#a0a0a0;
+    --accent:#d4af37;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,sans-serif;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 18px;
+}
+
+header h1{
+    font-size:30px;
+}
+
+header p{
+    color:var(--muted);
+    margin-top:6px;
+}
+
+section{
+    margin-top:30px;
+}
+
+h2{
+    color:var(--accent);
+    margin-bottom:12px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:14px;
+}
+
+.urdu{
+    font-family:"Noto Nastaliq Urdu", serif;
+    direction:rtl;
+    text-align:right;
+    font-size:18px;
+    line-height:2.2;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:14px;
+}
+
+a.btn{
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:22px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    font-size:14px;
+}
+
+a.btn.primary{
+    background:var(--accent);
+    color:#000;
+}
+
+pre{
+    background:#0f0f14;
+    padding:14px;
+    border-radius:10px;
+    overflow-x:auto;
+    font-size:13px;
+}
+
+img{
+    max-width:100%;
+    border-radius:12px;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    color:#666;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Nastaliq Urdu Font</h1>
+    <p>Android Font Module • Tested on Android 7–15</p>
+</header>
+
+<section>
+<div class="card urdu">
+نستعلیق اردو فونٹ اینڈرائیڈ صارفین کے لیے تیار کیا گیا ہے
+جو روایتی خوشخطی کو جدید موبائل نظام میں لے آتا ہے۔
+یہ فونٹ OneUI، OxygenOS اور تمام AOSP ROMs پر کام کرتا ہے۔
+</div>
+</section>
+
+<section>
+<h2>Video Guide</h2>
+<div class="card">
+<a class="btn primary" href="https://youtu.be/2xI-Kagl1yI?t=46" target="_blank">
+Watch Setup Video
+</a>
+</div>
+</section>
+
+<section>
+<h2>Important (Non-Rooted Devices)</h2>
+<div class="card">
+<p>
+If you want to use this font on a <strong>Non-Rooted device</strong>,
+use the alternative module below:
+</p>
+<div class="buttons">
+<a class="btn" href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted" target="_blank">
+Non-Rooted Guide
+</a>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Downloads</h2>
+<div class="card">
+<div class="buttons">
+<a class="btn primary" href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases" target="_blank">
+All Releases
+</a>
+<a class="btn" href="https://t.me/HassansTechInsights" target="_blank">
+Telegram Channel
+</a>
+<a class="btn" href="https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/" target="_blank">
+XDA Thread
+</a>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Android Usage Example</h2>
+<div class="card">
+<pre>
+&lt;TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/nastaliq_urdu"
+    android:text="یہ اردو متن ہے"/&gt;
+</pre>
+<p style="color:var(--muted);margin-top:8px">
+This example shows how to apply the Nastaliq font in Android layouts.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Screenshots</h2>
+<div class="card">
+<img src="Images/Banner2.png" alt="">
+</div>
+</section>
+
+<section>
+<h2>Credits</h2>
+<div class="card">
+<p>Hassan Kareem</p>
+</div>
+</section>
+
+<footer>
+© 2025 Hassan Kareem • Nastaliq Urdu Font
+</footer>
+
+</div>
+
+</body>
+</html>
