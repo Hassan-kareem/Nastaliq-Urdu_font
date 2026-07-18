@@ -1,0 +1,6 @@
+.idea/
+*.zip
+*.log
+/scratch/
+temp.json
+*.bak
