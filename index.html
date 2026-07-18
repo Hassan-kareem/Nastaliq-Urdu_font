@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <title>Nastaliq Urdu Font Magisk Module - Custom Urdu Fonts for Android</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Download the premium Nastaliq Urdu font Magisk and KernelSU modules for Android. Get Jameel Noori Nastaliq, Noto Nastaliq, and Mehr Nastaliq fonts working system-wide on Android 13 to 17.">
+    <meta name="keywords" content="Nastaliq Urdu, Urdu Font Magisk, Jameel Noori Nastaliq Android, Noto Nastaliq Magisk, Mehr Nastaliq KernelSU, Urdu Font Android 15, Urdu Font Android 16, Urdu Font Android 17, Android Nastaliq, Magisk Module, KernelSU Module">
+    <meta name="author" content="Hassan Karim">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hassan-kareem.github.io/Nastaliq-Urdu_font/">
+
+    <!-- Open Graph (Facebook / Telegram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nastaliq Urdu Font Magisk Module - Custom Urdu Fonts for Android">
+    <meta property="og:description" content="Get premium handwritten Nastaliq Urdu calligraphy working system-wide on Android. High compatibility modules for Jameel Noori, Noto, and Mehr variants.">
+    <meta property="og:url" content="https://hassan-kareem.github.io/Nastaliq-Urdu_font/">
+    <meta property="og:site_name" content="Nastaliq Urdu Font for Android">
+    <meta property="og:image" content="https://hassan-kareem.github.io/Nastaliq-Urdu_font/Images/Banner2.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nastaliq Urdu Font Magisk Module - Custom Urdu Fonts for Android">
+    <meta name="twitter:description" content="Get premium handwritten Nastaliq Urdu calligraphy working system-wide on Android. High compatibility modules for Jameel Noori, Noto, and Mehr variants.">
+    <meta name="twitter:image" content="https://hassan-kareem.github.io/Nastaliq-Urdu_font/Images/Banner2.png">
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Nastaliq Urdu Font Module",
+      "operatingSystem": "Android",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Hassan Karim",
+        "url": "https://github.com/Hassan-kareem"
+      },
+      "downloadUrl": "https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases",
+      "description": "Premium Nastaliq Urdu Magisk and KernelSU font modules for Android devices, featuring Jameel Noori, Noto Nastaliq, and Mehr Nastaliq variants.",
+      "softwareVersion": "5.2"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets & Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050508;
+            --bg-accent: #0b0b13;
+            --accent: #d4af37;
+            --accent-rgb: 212, 175, 55;
+            --accent-glow: rgba(212, 175, 55, 0.15);
+            --danger: #ff4a4a;
+            --danger-rgb: 255, 74, 74;
+            --danger-glow: rgba(255, 74, 74, 0.15);
+            --success: #3ef08b;
+            --success-glow: rgba(62, 240, 139, 0.1);
+            --text-primary: #f8f9fa;
+            --text-secondary: #9ea2b6;
+            --glass-bg: rgba(15, 15, 27, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --glass-border-hover: rgba(212, 175, 55, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(20, 20, 35, 0.7) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(15, 15, 30, 0.8) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0; left: 0; width: 0%; height: 3px;
+            background: linear-gradient(to right, #d4af37, #ffe494);
+            z-index: 9999;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        /* Glowing background blobs */
+        .glowing-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        .blob-1 {
+            top: -100px;
+            left: 15%;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.05) 50%, transparent 100%);
+        }
+
+        .blob-2 {
+            top: 600px;
+            right: 5%;
+            width: 750px;
+            height: 750px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(0, 240, 255, 0.03) 50%, transparent 100%);
+        }
+
+        .blob-3 {
+            bottom: 200px;
+            left: -10%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(255, 74, 74, 0.18) 0%, rgba(255, 74, 74, 0.02) 50%, transparent 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        /* Nav Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 24px;
+            line-height: 1;
+            display: inline-block;
+            transform: translateY(-4px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 0 80px;
+            position: relative;
+        }
+
+        .hero p.tagline {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 84px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #ffe082 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.desc {
+            max-width: 650px;
+            margin: 0 auto 40px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Premium Glass Card - Shafaf OS Real Frosted Glass Mode */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                inset 1px 0 0 rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(212, 175, 55, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Danger/Warning Card Styling */
+        .glass-card.danger {
+            background: rgba(255, 74, 74, 0.03);
+            border: 1px solid rgba(255, 74, 74, 0.25);
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 74, 74, 0.2);
+        }
+
+        .glass-card.danger:hover {
+            border-color: rgba(255, 74, 74, 0.55);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(255, 74, 74, 0.1),
+                inset 0 1px 1px rgba(255, 74, 74, 0.3);
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .section-title.danger-title span {
+            color: var(--danger);
+        }
+
+        /* Interactive Phone Mockup with Font rendering */
+        .preview-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin: 60px 0 100px;
+        }
+
+        .mockup-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Interactive Mobile Frame */
+        .phone-frame {
+            width: 320px;
+            height: 640px;
+            background: #0d0d18;
+            border-radius: 40px;
+            border: 11px solid #1a1a2b;
+            box-shadow: 
+                0 0 0 3px rgba(255, 255, 255, 0.05),
+                0 40px 80px rgba(0, 0, 0, 0.8),
+                0 0 50px rgba(212, 175, 55, 0.05);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Notch / Dynamic Island */
+        .phone-notch {
+            width: 110px;
+            height: 25px;
+            background: #1a1a2b;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        /* Mock Chat App Header */
+        .chat-header {
+            background: #141424;
+            padding: 35px 16px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            width: 34px;
+            height: 34px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .chat-title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .chat-status {
+            font-size: 10px;
+            color: var(--success);
+        }
+
+        /* Chat Screen Content */
+        .chat-messages {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow-y: auto;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        .msg-bubble {
+            max-width: 85%;
+            padding: 12px 14px;
+            border-radius: 18px;
+            font-size: 13px;
+            line-height: 1.9;
+            font-family: "Noto Nastaliq Urdu", serif;
+            direction: rtl;
+            text-align: right;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .msg-incoming {
+            background: #1e1e30;
+            color: #fff;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .msg-outgoing {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.25));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: #ffe89e;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-input-bar {
+            background: #141424;
+            padding: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: #1a1a2d;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 8px 14px;
+            color: #fff;
+            font-size: 11px;
+            outline: none;
+            font-family: "Noto Nastaliq Urdu", serif;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .send-btn {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        /* Variant Card Grid */
+        .variants-title {
+            margin: 60px 0 30px;
+            text-align: center;
+        }
+
+        .variants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .variant-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .variant-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 
+                0 20px 45px rgba(0, 0, 0, 0.6),
+                0 0 15px rgba(212, 175, 55, 0.06),
+                inset 0 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        .variant-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .variant-badge {
+            padding: 4px 10px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+
+        .variant-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .variant-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        /* Buttons & Actions */
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #ffe494 0%, var(--accent) 100%);
+            color: #0d0d13;
+            box-shadow: 0 8px 16px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Setup Guides */
+        .guide-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .step-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .step-num {
+            font-size: 36px;
+            font-weight: 800;
+            color: rgba(212, 175, 55, 0.15);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .step-item h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .step-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Recovery / Code boxes */
+        .code-box {
+            background: #08080f;
+            border: 1px solid var(--glass-border);
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+        }
+
+        .code-box i {
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .code-box i:hover {
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--glass-border);
+            margin-top: 80px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .preview-showcase {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero {
+                padding: 80px 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+    <div class="glowing-blob blob-1"></div>
+    <div class="glowing-blob blob-2"></div>
+    <div class="glowing-blob blob-3"></div>
+
+    <div class="container">
+        <!-- Header Navbar -->
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span>ن</span> Nastaliq Urdu
+            </a>
+            <ul class="nav-links">
+                <li><a href="#variants">Variants</a></li>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#recovery">Recovery</a></li>
+                <li><a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <p class="tagline">Traditional Elegance Meets Android</p>
+            <h1>Beautiful <span>Nastaliq</span> Font<br>On Your Android Device</h1>
+            <p class="desc">
+                Bring the genuine aesthetic of handwritten Urdu calligraphy directly to your phone. 
+                Compatible with Android 13, 14, 15, 16, and 17. Fully optimized for Magisk & KernelSU.
+            </p>
+            <div>
+                <a href="#variants" class="btn btn-gold"><i class="fa-solid fa-download"></i> Get Started</a>
+                <a href="https://t.me/HassansTechInsights" target="_blank" class="btn btn-outline" style="margin-left: 12px;"><i class="fa-brands fa-telegram"></i> Telegram Chat</a>
+            </div>
+        </header>
+
+        <!-- Live Font Preview & Phone Showcase (Interactive, NO static preview images) -->
+        <section class="preview-showcase">
+            <div data-aos="fade-right">
+                <h2 class="section-title"><span>Real-time</span> Font Preview</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 15px;">
+                    This mockup displays the actual rendering of the Noto Nastaliq Urdu font on an Android chat UI. Notice the elegant vertical layouts, cursive connectors, and traditional script structure.
+                </p>
+                <div class="glass-card" style="padding: 30px; font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; text-align: right; line-height: 2.2; font-size: 20px; border-right: 4px solid var(--accent);">
+                    اردو کی خوبصورتی اور اس کی اصل روح نستعلیق رسم الخط میں پوشیدہ ہے۔ اب آپ اپنی گفتگو کو نسخ کے بجائے نستعلیق کے روایتی حسن کے ساتھ نکھار سکتے ہیں۔
+                </div>
+            </div>
+
+            <div class="mockup-container" data-aos="fade-left">
+                <!-- HTML/CSS Rendered Phone UI -->
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    
+                    <div class="chat-header">
+                        <div class="avatar">ن</div>
+                        <div class="chat-title-group">
+                            <span class="chat-name">Nastaliq Community</span>
+                            <span class="chat-status">آن لائن</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div class="msg-bubble msg-incoming">
+                            السلام علیکم بھائی! کیا حال ہے؟
+                        </div>
+                        <div class="msg-bubble msg-outgoing">
+                            وعلیکم السلام! الحمدللہ میں بالکل ٹھیک ہوں۔ یہ نیا نستعلیق فونٹ واقعی لاجواب دکھ رہا ہے۔
+                        </div>
+                        <div class="msg-bubble msg-incoming">
+                            جی بالکل! اب تمام ایپلیکیشنز جیسے واٹس ایپ اور فیس بک پر اردو پڑھنا اور لکھنا بہت ہی خوبصورت ہو گیا ہے۔
+                        </div>
+                        <div class="msg-bubble msg-outgoing">
+                            سچ کہا! اب موبائل اسکرین پر روایتی خطاطی کا لطف مل رہا ہے۔
+                        </div>
+                    </div>
+
+                    <div class="chat-input-bar">
+                        <input type="text" class="chat-input" placeholder="اردو میں ٹائپ کریں..." disabled>
+                        <button class="send-btn"><i class="fa-solid fa-paper-plane" style="font-size: 12px;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Rule Callout -->
+        <section data-aos="fade-up" style="margin-bottom: 80px;">
+            <div class="glass-card danger">
+                <h2 class="section-title danger-title" style="margin-bottom: 12px; color: var(--danger);">
+                    <i class="fa-solid fa-circle-exclamation"></i> <span>Critical Safety Rule</span> (Urdu Lang Setup)
+                </h2>
+                <p style="font-weight: 600; margin-bottom: 8px;">Do NOT drag Urdu to the #1 position in your System Language settings!</p>
+                <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+                    On Android 15, 16, and 17, making a heavy font like Jameel Noori your first (primary) system language will crash SystemUI / Skia engine, leading to a black screen loop. 
+                    <br><br>
+                    <strong>Correct Way:</strong> Keep English (or your default language) at position #1, and add Urdu at position #2. Urdu text in all apps will still automatically show in Nastaliq!
+                </p>
+                <a href="#recovery" class="btn btn-outline" style="color: var(--danger); border-color: rgba(255, 74, 74, 0.2);"><i class="fa-solid fa-wrench"></i> Recovery Steps</a>
+            </div>
+        </section>
+
+        <!-- Variants Grid -->
+        <section id="variants">
+            <div class="variants-title" data-aos="fade-up">
+                <h2 class="section-title" style="justify-content: center;">Available <span>Font Variants</span></h2>
+                <p style="color: var(--text-secondary); font-size: 14px; max-width: 600px; margin: 10px auto 0;">
+                    Select the font variant that best suits your style and device compatibility.
+                </p>
+            </div>
+
+            <div class="variants-grid">
+                <!-- Noto Nastaliq -->
+                <div class="variant-card" data-aos="fade-up">
+                    <div class="variant-header">
+                        <span class="variant-badge">Safe & Stable</span>
+                    </div>
+                    <h3>Noto Nastaliq</h3>
+                    <p>Official Google variant. Perfect compatibility, fully safe to use as a primary language, and highly optimized for rendering efficiency.</p>
+                    <div class="btn-stack">
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.3/NotoNastaliqUrdu-v3.3.zip" class="btn btn-gold"><i class="fa-solid fa-download"></i> Download Main</a>
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.3/NotoNastaliqUrdu-alt-v3.3.zip" class="btn btn-outline"><i class="fa-solid fa-arrows-split-up-and-left"></i> Download Alt (Naskh Swap)</a>
+                    </div>
+                </div>
+
+                <!-- Noori Kasheeda -->
+                <div class="variant-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="variant-header">
+                        <span class="variant-badge" style="color:#d4af37;">Artistic Script</span>
+                    </div>
+                    <h3>Noori Kasheeda</h3>
+                    <p>Featuring beautiful elongated strokes (Kasheeda) for bold text variants. The classic, artistic handwriting look.</p>
+                    <div class="btn-stack">
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v5.2/Nastaliq-Urdu_Kasheeda-v5.2.zip" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download Kasheeda</a>
+                    </div>
+                </div>
+
+                <!-- Noori Regular -->
+                <div class="variant-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="variant-header">
+                        <span class="variant-badge">Classic</span>
+                    </div>
+                    <h3>Noori Regular</h3>
+                    <p>The standard, globally loved Jameel Noori script. Perfectly balanced line heights and traditional proportions for comfortable daily reading.</p>
+                    <div class="btn-stack">
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v5.2/Nastaliq-Urdu_Regular-v5.2.zip" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download Regular</a>
+                    </div>
+                </div>
+
+                <!-- Mehr Nastaliq -->
+                <div class="variant-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="variant-header">
+                        <span class="variant-badge">Fast & Compact</span>
+                    </div>
+                    <h3>Mehr Nastaliq</h3>
+                    <p>Web-optimized, extremely lightweight, and compact script design. Perfect for smaller screens and fast rendering speeds.</p>
+                    <div class="btn-stack">
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.3/Mehr_Nastaliq-Urdu-v3.3.zip" class="btn btn-gold"><i class="fa-solid fa-download"></i> Download Main</a>
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.3/Mehr_Nastaliq-alt-v3.3.zip" class="btn btn-outline"><i class="fa-solid fa-arrows-split-up-and-left"></i> Download Alt (Naskh Swap)</a>
+                    </div>
+                </div>
+
+                <!-- Non-Rooted Device -->
+                <div class="variant-card" data-aos="fade-up" data-aos-delay="400" style="border-color: rgba(0, 240, 255, 0.15);">
+                    <div class="variant-header">
+                        <span class="variant-badge" style="background: rgba(0, 240, 255, 0.08); border-color: rgba(0, 240, 255, 0.25); color: #00f0ff;">No Root Required</span>
+                    </div>
+                    <h3>Non-Rooted Devices</h3>
+                    <p>Want to enjoy beautiful Nastaliq script on your phone without rooting? Download the regular or kasheeda packages and follow our step-by-step installation guide.</p>
+                    <div class="btn-stack">
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip" class="btn" style="background: linear-gradient(135deg, #a7f7ff 0%, #00d8ff 100%); color: #0d0d13; box-shadow: 0 8px 16px rgba(0, 240, 255, 0.15);"><i class="fa-solid fa-download"></i> Download Regular</a>
+                        <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download Kasheeda</a>
+                        <a href="non-rooted.html" class="btn btn-outline" style="border-color: rgba(0, 240, 255, 0.25); color: #00f0ff;"><i class="fa-solid fa-book"></i> View Setup Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Setup -->
+        <section id="setup" data-aos="fade-up" style="margin-bottom: 80px;">
+            <h2 class="section-title"><span>How to</span> Install & Configure</h2>
+            <div class="guide-steps">
+                <div class="step-item">
+                    <span class="step-num">01</span>
+                    <h4>Flash the Module</h4>
+                    <p>Download the zip for your favorite variant and flash it using Magisk Manager or KernelSU.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">02</span>
+                    <h4>Configure Settings</h4>
+                    <p>Navigate to Settings > System > Languages. Add <strong>Urdu</strong>, but keep it dragged below English (Language #2).</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">03</span>
+                    <h4>Reboot & Enjoy</h4>
+                    <p>Reboot your phone. Open any app like WhatsApp or Chrome, and all Urdu text will be rendered in premium Nastaliq layout!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recovery Section -->
+        <section id="recovery" data-aos="fade-up">
+            <h2 class="section-title danger-title"><i class="fa-solid fa-screwdriver-wrench"></i> <span>Crash</span> Recovery</h2>
+            <div class="glass-card danger" style="padding: 30px;">
+                <p style="margin-bottom: 20px; font-size: 15px; color: var(--text-primary);">
+                    If you mistakenly set Urdu as Language #1 and get stuck in a bootloop or black screen, boot into custom recovery (TWRP/OrangeFox) and delete the module directory:
+                </p>
+                
+                <h4 style="color:#fff; font-size: 14px; margin-bottom: 6px;">For Standard Jameel Noori variants:</h4>
+                <div class="code-box">
+                    <span>rm -rf /data/adb/modules/Nastaliq_Urdu</span>
+                    <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('rm -rf /data/adb/modules/Nastaliq_Urdu')"></i>
+                </div>
+
+                <h4 style="color:#fff; font-size: 14px; margin-bottom: 6px; margin-top: 24px;">For Noto Alt (Naskh swap) variant:</h4>
+                <div class="code-box">
+                    <span>rm -rf /data/adb/modules/NotoNastaliqUrdu-alt</span>
+                    <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('rm -rf /data/adb/modules/NotoNastaliqUrdu-alt')"></i>
+                </div>
+
+                <h4 style="color:#fff; font-size: 14px; margin-bottom: 6px; margin-top: 24px;">For Mehr Alt (Naskh swap) variant:</h4>
+                <div class="code-box">
+                    <span>rm -rf /data/adb/modules/Mehr_Nastaliq-alt</span>
+                    <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('rm -rf /data/adb/modules/Mehr_Nastaliq-alt')"></i>
+                </div>
+                
+                <p style="margin-top: 24px; font-size: 13px; color: var(--text-secondary);">
+                    After executing the command, reboot your phone normally and the system will start up correctly with the module removed.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div style="margin-bottom: 24px;">
+                <a href="https://github.com/Hassan-kareem/Nastaliq-Urdu_font" target="_blank"><i class="fa-brands fa-github" style="font-size: 20px;"></i></a>
+                <a href="https://t.me/HassansTechInsights" target="_blank"><i class="fa-brands fa-telegram" style="font-size: 20px;"></i></a>
+            </div>
+            <p>Created by <a href="https://github.com/Hassan-kareem" target="_blank" style="font-weight: 700;">Hassan Karim</a></p>
+            <p style="margin-top: 8px; font-size: 11px; opacity: 0.4; letter-spacing: 2px;">ELEGANCE • TRADITION • TECHNOLOGY</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Scroll Indicator
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+
+        // Initialize Tilt on cards
+        VanillaTilt.init(document.querySelectorAll(".glass-card, .variant-card, .phone-frame"), {
+            max: 3,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1,
+        });
+    </script>
+</body>
+</html>
