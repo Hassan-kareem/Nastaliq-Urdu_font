@@ -1,12 +1,15 @@
-# Mehr Nastaliq Urdu
+# Nastaliq Urdu
 ![Urdu Banner](Images/Banner2.png)
-## Mehr Nastaliq Font Module for Urdu Users
+
+## Nastaleeq Font Module for Urdu Users
+
+Nastaliq brings the elegance of traditional calligraphy to your Android device with its beautiful Nastaliq script. This font is designed for Urdu users who appreciate the beauty and expressiveness of this timeless writing style.
 
 * Tested on Android 7 and 13,14,15, it will work on every Android device that has secondary and primary language options. Watch the [video](https://youtu.be/2xI-Kagl1yI?si=ja5x8huKUiWJnF9J&t=46) to learn how to check, including OneUI, OxygenOS, and all AOSP-based ROMs.
 
 > [!Important]
 >[![Image](Images/Non-Rooted.jpg)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted)
-> If you want to use Nastaliq on a Non-Rooted Device, click [here](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted)
+> If you want to use it on a Non-Rooted Device, click [here](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/tree/Non-Rooted)
 
 ## Installation
 ![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/total.svg?style=plastic&label=Downloads)
@@ -21,7 +24,9 @@
 2. **Flash:** Install the downloaded file using Magisk or KernelSU.
 
 > [!NOTE]
-> Use the [alternative](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliqUrdu-alt/NotoNastaliqUrdu-alt.zip) module if your device doesn't support multiple language options.
+> 
+> Choose between two variants: **Kasheeda** and **Regular**. The Kasheeda Variant utilizes the Kasheeda font for bold text, while the Regular variant uses the Bold font.
+> * Use the [alternative](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliqUrdu-alt/NotoNastaliqUrdu-alt.zip) module if your device doesn't support multiple language options.
 
 ## Add Urdu Language
 
@@ -29,10 +34,20 @@
 2. Add Urdu language.
 Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu on your Android device!
 
+![Guide](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/fbcc1143-f785-4f83-b236-0e0831e95e14)
+
+
 ## Screenshots
+
+* Kasheeda Variant <br> ![Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/245c7e76-07dc-4d4a-80c8-e8ab4a555b3d) <!-- Describing Kasheeda Variant -->
+* Noto Nastaliq Urdu <br>
+![NotoNastaliqUrdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/027aa95a-1913-400b-a99e-352ac280c858)
+
 * Mehr Nastaliq Urdu <br>
 ![MehrNastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/b9e12b4f-f193-4bd6-85ee-853c15679458)
 
+* Regular Variant <br>
+![Regular png](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/b4af05c4-7751-41e0-9b10-39f43aff8428) <!-- Describing Regular Variant -->
 
 ### Good News! Say goodbye to font issues like this 👇
 
@@ -40,3 +55,50 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 
 ### Credit
 Me (Hassan Karim)
+
+---
+
+## Troubleshooting & Diagnostics
+
+If you encounter app crashes (like WhatsApp, Instagram, or SystemUI) after installing the module, or if you need to provide logs for debugging, follow this guide.
+
+### 1. How to Capture Crash Logs (Logcat)
+If an app crashes, providing a log is the **only way** for the developer to diagnose and fix the issue.
+1. Connect your device to a PC with **USB Debugging** enabled.
+2. Open a terminal (CMD / PowerShell / Bash) and run:
+   ```bash
+   adb logcat -d *:E > logcat_errors.txt
+   ```
+3. To search specifically for the crash reason, run:
+   ```bash
+   adb logcat -d | grep -i "AndroidRuntime" > crash_dump.txt
+   ```
+4. Share `logcat_errors.txt` or `crash_dump.txt` on the [XDA Thread](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/) or GitHub Issues.
+
+### 2. Common Causes of App Crashes
+* **Cache Issues**: If an app crashes immediately, it might be trying to render cached layouts with incorrect font metrics. 
+  * *Fix*: Go to `Settings > Apps > [Crashing App] > Storage` and tap **Clear Cache** (do NOT click Clear Data unless backed up).
+* **System Whitespace Bug (Android 15+)**: Older module versions had spaces inside the XML tags (e.g. `<font> NotoNastaliqUrdu-Regular.ttf </font>`). Android 15/16's strict XML parsers do not strip these spaces and fail to find the file, causing crashes. *This has been fixed in the latest release.*
+
+### 3. Emergency Recovery (Bootloop or SystemUI Crash)
+If your primary system language is Urdu and the font causes a crash loop, you won't be able to open Magisk/KernelSU manager to disable it. Use one of these recovery methods:
+
+#### Method A: Boot into Safe Mode (Easiest)
+1. Turn off your device.
+2. Power it on, and as soon as the boot animation starts, press and hold the **Volume Down** button until it finishes booting.
+3. Your phone will boot into **Safe Mode** (indicated by a "Safe Mode" watermark on the screen).
+4. Magisk and KernelSU automatically disable all modules in Safe Mode.
+5. Simply reboot your phone normally. The system will start up with modules disabled, allowing you to safely open Magisk/KernelSU and uninstall the font module.
+
+#### Method B: Remove via TWRP/OrangeFox (Recovery)
+If you have a custom recovery installed:
+1. Boot into recovery mode.
+2. Open **Advanced > Terminal** (or use `adb shell` from your PC).
+3. Run the following command to delete the module folder:
+   ```bash
+   rm -rf /data/adb/modules/Nastaliq_Urdu
+   ```
+4. Reboot to system.
+
+#### Method C: KernelSU Safe Mode Trigger
+If you are using KernelSU, you can force disable all modules during early boot by pressing the **Volume Down** key multiple times as soon as the device vibrates/power-on screen appears.
