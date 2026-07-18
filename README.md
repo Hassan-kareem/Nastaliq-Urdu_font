@@ -30,8 +30,20 @@ Nastaliq brings the elegance of traditional calligraphy to your Android device w
 
 ## Add Urdu Language
 
+> [!CAUTION]
+> **Do NOT set Urdu as your #1 (Primary/First) system language.**
+>
+> Setting Urdu as the **primary language** causes a **black screen / system UI crash** on Android 15, 16, and 17. The system tries to render numbers, battery, time, and all UI elements using the Nastaliq font, which is not designed as a system-wide UI font — causing the Android graphics engine to freeze.
+>
+> ✅ **Safe method:** Add Urdu as your **secondary language** (Language #2 or below). Keep English or your OEM language as #1. All Urdu text in apps like WhatsApp, Chrome, and social media will still display in beautiful Nastaliq.
+>
+> ⛔ If you already set Urdu as primary and your screen went black, see the **Emergency Recovery** section below.
+
 1. Go to `Settings > Languages and input > Languages`.
-2. Add Urdu language.
+2. Tap **Add a language** → Select **Urdu**.
+3. **Drag Urdu below your main language** so it stays as language #2.
+4. Reboot — Urdu will appear in Nastaliq in all apps.
+
 Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu on your Android device!
 
 ![Guide](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/fbcc1143-f785-4f83-b236-0e0831e95e14)
@@ -49,7 +61,7 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 * Regular Variant <br>
 ![Regular png](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/b4af05c4-7751-41e0-9b10-39f43aff8428) <!-- Describing Regular Variant -->
 
-### Good News! Say goodbye to font issues like this 👇
+### Good News! Say goodbye to font issues like this ??
 
 ![Font Issue](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/85930501-fab5-4e85-b2e5-55592639ff14)
 
