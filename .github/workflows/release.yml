@@ -1,0 +1,111 @@
+name: Build and Release Magisk Module
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version (e.g., 5.2)"
+        required: true
+      version_code:
+        description: "Release version code (e.g., 52)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install jq and zip
+        run: sudo apt-get update && sudo apt-get install -y jq zip
+
+      - name: Determine variant names
+        run: |
+          BRANCH="${{ github.ref_name }}"
+          VERSION="${{ github.event.inputs.version }}"
+          VERSION_CODE="${{ github.event.inputs.version_code }}"
+          
+          if [ "$BRANCH" = "Kasheeda" ]; then
+              ZIP_NAME="Nastaliq-Urdu_Kasheeda-v${VERSION}.zip"
+              TAG_NAME="Noori-Kasheeda-v${VERSION}"
+              RELEASE_NAME="Noori Kasheeda v${VERSION}"
+          elif [ "$BRANCH" = "Regular" ]; then
+              ZIP_NAME="Nastaliq-Urdu_Regular-v${VERSION}.zip"
+              TAG_NAME="Noori-Regular-v${VERSION}"
+              RELEASE_NAME="Noori Regular v${VERSION}"
+          elif [ "$BRANCH" = "NotoNastaliqUrdu" ]; then
+              ZIP_NAME="NotoNastaliqUrdu-v${VERSION}.zip"
+              TAG_NAME="NotoNastaliq-v${VERSION}"
+              RELEASE_NAME="Noto Nastaliq Urdu v${VERSION}"
+          elif [ "$BRANCH" = "MehrNastaliq" ]; then
+              ZIP_NAME="Mehr_Nastaliq-Urdu-v${VERSION}.zip"
+              TAG_NAME="MehrNastaliq-v${VERSION}"
+              RELEASE_NAME="Mehr Nastaliq Urdu v${VERSION}"
+          else
+              ZIP_NAME="Nastaliq-Urdu-${BRANCH}-v${VERSION}.zip"
+              TAG_NAME="${BRANCH}-v${VERSION}"
+              RELEASE_NAME="${BRANCH} v${VERSION}"
+          fi
+          
+          echo "ZIP_NAME=${ZIP_NAME}" >> $GITHUB_ENV
+          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "VERSION_CODE=${VERSION_CODE}" >> $GITHUB_ENV
+
+      - name: Update module.prop
+        run: |
+          sed -i "s/^version=.*/version=${{ env.VERSION }}/" Module/module.prop
+          sed -i "s/^versionCode=.*/versionCode=${{ env.VERSION_CODE }}/" Module/module.prop
+
+      - name: Update update.json
+        run: |
+          jq --arg ver "${{ env.VERSION }}" \
+             --argcode verc "${{ env.VERSION_CODE }}" \
+             --arg url "https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/${{ env.ZIP_NAME }}" \
+             '.version = $ver | .versionCode = $verc | .zipUrl = $url' \
+             update.json > temp.json && mv temp.json update.json
+
+      - name: Package Magisk Module
+        run: |
+          cd Module
+          zip -r ../${{ env.ZIP_NAME }} *
+          cd ..
+
+      - name: Commit and Push Version Bumps
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add Module/module.prop update.json
+          git commit -m "Bump version to ${{ env.VERSION }} (${{ env.VERSION_CODE }}) [skip ci]"
+          git push origin ${{ github.ref_name }}
+
+      - name: Create and Push Git Tag
+        run: |
+          git tag ${{ env.TAG_NAME }}
+          git push origin ${{ env.TAG_NAME }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: ${{ env.RELEASE_NAME }}
+          files: ${{ env.ZIP_NAME }}
+          draft: false
+          prerelease: false
+          body: |
+            ### Nastaliq Urdu Font Module Release (v${{ env.VERSION }})
+            
+            Automatically generated release for branch `${{ github.ref_name }}`.
+            
+            * Variant: **${{ env.RELEASE_NAME }}**
+            * Version: **${{ env.VERSION }}**
+            * Version Code: **${{ env.VERSION_CODE }}**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
