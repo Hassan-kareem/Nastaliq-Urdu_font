@@ -67,9 +67,9 @@ jobs:
       - name: Update update.json
         run: |
           jq --arg ver "${{ env.VERSION }}" \
-             --argcode verc "${{ env.VERSION_CODE }}" \
+             --arg verc "${{ env.VERSION_CODE }}" \
              --arg url "https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/${{ env.ZIP_NAME }}" \
-             '.version = $ver | .versionCode = $verc | .zipUrl = $url' \
+             '. + {version: $ver, versionCode: $verc, zipUrl: $url}' \
              update.json > temp.json && mv temp.json update.json
 
       - name: Package Magisk Module
