@@ -1,7 +1,7 @@
 id=NotoNastaliqUrdu-alt
 name=Noto Nastaliq Urdu Alternative
-version=1.0
-versionCode=100
+version=3.3
+versionCode=33
 author=Hassan-karim
 description=Noto Nastaliq Urdu Font for Urdu language
 updateJson=https://raw.githubusercontent.com/Hassan-kareem/Nastaliq-Urdu_font/NotoNastaliqUrdu/Module/alternative/update.json
