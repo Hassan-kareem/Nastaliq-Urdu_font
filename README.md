@@ -14,31 +14,37 @@ Nastaliq brings the elegance of traditional calligraphy to your Android device w
 ## Installation
 ![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/total.svg?style=plastic&label=Downloads)
 [![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
-[![Download Noto Nastaliq Urdu](https://img.shields.io/badge/Download-Noto%20Nastaliq%20Urdu-orange?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.1/NotoNastaliqUrdu-v3.1.zip)
-[![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v5.1/Nastaliq-Urdu_Kasheeda-v5.1.zip)
-[![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v5.1/Nastaliq-Urdu_Regular-v5.1.zip)
-[![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-dark?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.1/Mehr_Nastaliq-Urdu-v3.1.zip)
+[![Download Noto Nastaliq Urdu](https://img.shields.io/badge/Download-Noto%20Nastaliq%20Urdu-orange?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.3/NotoNastaliqUrdu-v3.3.zip)
+[![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v5.2/Nastaliq-Urdu_Kasheeda-v5.2.zip)
+[![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v5.2/Nastaliq-Urdu_Regular-v5.2.zip)
+[![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-dark?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.3/Mehr_Nastaliq-Urdu-v3.3.zip)
 [![XDA Thread](https://img.shields.io/badge/XDA%20Thread-Visit%20Now-green?style=plastic)](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/)
 
-1. **Download:** Obtain the latest zip from Releases: [Noto Nastaliq Urdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.1/NotoNastaliqUrdu-v3.1.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v5.1/Nastaliq-Urdu_Kasheeda-v5.1.zip) or [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v5.1/Nastaliq-Urdu_Regular-v5.1.zip), [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.1/Mehr_Nastaliq-Urdu-v3.1.zip)
+1. **Download:** Obtain the latest zip from Releases: [Noto Nastaliq Urdu](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.3/NotoNastaliqUrdu-v3.3.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Kasheeda-v5.2/Nastaliq-Urdu_Kasheeda-v5.2.zip) or [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/Noori-Regular-v5.2/Nastaliq-Urdu_Regular-v5.2.zip), [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.3/Mehr_Nastaliq-Urdu-v3.3.zip)
 2. **Flash:** Install the downloaded file using Magisk or KernelSU.
 
 > [!NOTE]
 > 
 > Choose between two variants: **Kasheeda** and **Regular**. The Kasheeda Variant utilizes the Kasheeda font for bold text, while the Regular variant uses the Bold font.
-> * Use the [alternative](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliqUrdu-alt/NotoNastaliqUrdu-alt.zip) module if your device doesn't support multiple language options.
+> * Use the [alternative Noto](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/NotoNastaliq-v3.3/NotoNastaliqUrdu-alt-v3.3.zip) or [alternative Mehr](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq-v3.3/Mehr_Nastaliq-alt-v3.3.zip) module if your device doesn't support multiple language options.
 
 ## Add Urdu Language
 
-> [!NOTE]
-> **Noto Nastaliq Urdu** is the recommended font for users who want to use Urdu as their system language. It is Google's official font and is fully safe to use as a primary language.
+> [!CAUTION]
+> **Do NOT set Urdu as your #1 (Primary/First) system language.**
+>
+> Setting Urdu as the **primary language** causes a **black screen / system UI crash** on Android 15, 16, and 17. The system tries to render numbers, battery, time, and all UI elements using the Nastaliq font, which is not designed as a system-wide UI font — causing the Android graphics engine to freeze.
+>
+> ✅ **Safe method:** Add Urdu as your **secondary language** (Language #2 or below). Keep English or your OEM language as #1. All Urdu text in apps like WhatsApp, Chrome, and social media will still display in beautiful Nastaliq.
+>
+> ⛔ If you already set Urdu as primary and your screen went black, see the **Emergency Recovery** section below.
 
 1. Go to `Settings > Languages and input > Languages`.
 2. Tap **Add a language** → Select **Urdu**.
-3. You can place Urdu at position #1 or #2 — both work correctly with this font.
-4. Reboot — Urdu will appear in beautiful Noto Nastaliq in all apps.
+3. **Drag Urdu below your main language** so it stays as language #2.
+4. Reboot — Urdu will appear in Nastaliq in all apps.
 
-Use the Noto Nastaliq Urdu module and enjoy the beauty of Urdu on your Android device!
+Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu on your Android device!
 
 ![Guide](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/fbcc1143-f785-4f83-b236-0e0831e95e14)
 
@@ -55,7 +61,7 @@ Use the Noto Nastaliq Urdu module and enjoy the beauty of Urdu on your Android d
 * Regular Variant <br>
 ![Regular png](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/b4af05c4-7751-41e0-9b10-39f43aff8428) <!-- Describing Regular Variant -->
 
-### Good News! Say goodbye to font issues like this ??
+### Good News! Say goodbye to font issues like this 👇
 
 ![Font Issue](https://github.com/Hassan-kareem/Nastaliq-Fonts/assets/144518310/85930501-fab5-4e85-b2e5-55592639ff14)
 
