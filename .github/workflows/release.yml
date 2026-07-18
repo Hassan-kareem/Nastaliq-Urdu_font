@@ -35,25 +35,31 @@ jobs:
               ZIP_NAME="Nastaliq-Urdu_Kasheeda-v${VERSION}.zip"
               TAG_NAME="Noori-Kasheeda-v${VERSION}"
               RELEASE_NAME="Noori Kasheeda v${VERSION}"
+              ALT_ZIP_NAME=""
           elif [ "$BRANCH" = "Regular" ]; then
               ZIP_NAME="Nastaliq-Urdu_Regular-v${VERSION}.zip"
               TAG_NAME="Noori-Regular-v${VERSION}"
               RELEASE_NAME="Noori Regular v${VERSION}"
+              ALT_ZIP_NAME=""
           elif [ "$BRANCH" = "NotoNastaliqUrdu" ]; then
               ZIP_NAME="NotoNastaliqUrdu-v${VERSION}.zip"
               TAG_NAME="NotoNastaliq-v${VERSION}"
               RELEASE_NAME="Noto Nastaliq Urdu v${VERSION}"
+              ALT_ZIP_NAME="NotoNastaliqUrdu-alt-v${VERSION}.zip"
           elif [ "$BRANCH" = "MehrNastaliq" ]; then
               ZIP_NAME="Mehr_Nastaliq-Urdu-v${VERSION}.zip"
               TAG_NAME="MehrNastaliq-v${VERSION}"
               RELEASE_NAME="Mehr Nastaliq Urdu v${VERSION}"
+              ALT_ZIP_NAME="Mehr_Nastaliq-alt-v${VERSION}.zip"
           else
               ZIP_NAME="Nastaliq-Urdu-${BRANCH}-v${VERSION}.zip"
               TAG_NAME="${BRANCH}-v${VERSION}"
               RELEASE_NAME="${BRANCH} v${VERSION}"
+              ALT_ZIP_NAME=""
           fi
           
           echo "ZIP_NAME=${ZIP_NAME}" >> $GITHUB_ENV
+          echo "ALT_ZIP_NAME=${ALT_ZIP_NAME}" >> $GITHUB_ENV
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
           echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
@@ -63,6 +69,10 @@ jobs:
         run: |
           sed -i "s/^version=.*/version=${{ env.VERSION }}/" Module/module.prop
           sed -i "s/^versionCode=.*/versionCode=${{ env.VERSION_CODE }}/" Module/module.prop
+          if [ -f Module/alternative/module.prop ]; then
+              sed -i "s/^version=.*/version=${{ env.VERSION }}/" Module/alternative/module.prop
+              sed -i "s/^versionCode=.*/versionCode=${{ env.VERSION_CODE }}/" Module/alternative/module.prop
+          fi
 
       - name: Update update.json
         run: |
@@ -71,18 +81,38 @@ jobs:
              --arg url "https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/${{ env.ZIP_NAME }}" \
              '. + {version: $ver, versionCode: $verc, zipUrl: $url}' \
              update.json > temp.json && mv temp.json update.json
+          
+          if [ -d Module/alternative ]; then
+              jq --arg ver "${{ env.VERSION }}" \
+                 --arg verc "${{ env.VERSION_CODE }}" \
+                 --arg url "https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/${{ env.ALT_ZIP_NAME }}" \
+                 --arg chg "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/Module/alternative/changelog.md" \
+                 '. + {version: $ver, versionCode: ($verc | tonumber), zipUrl: $url, changelog: $chg}' \
+                 Module/alternative/update.json > temp.json && mv temp.json Module/alternative/update.json
+          fi
 
       - name: Package Magisk Module
         run: |
+          # Package main module, excluding the alternative folder
           cd Module
-          zip -r ../${{ env.ZIP_NAME }} *
+          zip -r ../${{ env.ZIP_NAME }} * -x "alternative/*"
           cd ..
+          
+          # Package alternative module if it exists
+          if [ -d Module/alternative ]; then
+              cd Module/alternative
+              zip -r ../../${{ env.ALT_ZIP_NAME }} *
+              cd ../..
+          fi
 
       - name: Commit and Push Version Bumps
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add Module/module.prop update.json
+          if [ -d Module/alternative ]; then
+              git add Module/alternative/module.prop Module/alternative/update.json
+          fi
           git commit -m "Bump version to ${{ env.VERSION }} (${{ env.VERSION_CODE }}) [skip ci]"
           git push origin ${{ github.ref_name }}
 
@@ -96,7 +126,9 @@ jobs:
         with:
           tag_name: ${{ env.TAG_NAME }}
           name: ${{ env.RELEASE_NAME }}
-          files: ${{ env.ZIP_NAME }}
+          files: |
+            ${{ env.ZIP_NAME }}
+            ${{ env.ALT_ZIP_NAME }}
           draft: false
           prerelease: false
           body: |
