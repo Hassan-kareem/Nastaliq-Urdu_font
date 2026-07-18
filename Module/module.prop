@@ -1,7 +1,7 @@
 id=NotoNastaliqUrdu
 name=Noto Nastaliq Urdu
-version=3.2
-versionCode=320
+version=3.1
+versionCode=31
 author=Hassan-karim
 description=Noto Nastaliq Urdu Font for Urdu language
 updateJson=https://raw.githubusercontent.com/Hassan-kareem/Nastaliq-Urdu_font/NotoNastaliqUrdu/update.json
