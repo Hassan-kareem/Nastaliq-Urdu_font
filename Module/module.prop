@@ -1,7 +1,7 @@
 id=MehrNastaliq
 name=Mehr Nastaliq Urdu
-version=3.2
-versionCode=32
+version=3.3
+versionCode=33
 author=Hassan-karim
 description=Mehr Nastaliq Urdu Font for Urdu
 updateJson=https://raw.githubusercontent.com/Hassan-kareem/Nastaliq-Urdu_font/MehrNastaliq/update.json
