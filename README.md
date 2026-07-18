@@ -55,3 +55,50 @@ Use The Jameel Noori Nastaliq module, enjoy the beauty and convenience of Urdu o
 
 ### Credit
 Me (Hassan Karim)
+
+---
+
+## Troubleshooting & Diagnostics
+
+If you encounter app crashes (like WhatsApp, Instagram, or SystemUI) after installing the module, or if you need to provide logs for debugging, follow this guide.
+
+### 1. How to Capture Crash Logs (Logcat)
+If an app crashes, providing a log is the **only way** for the developer to diagnose and fix the issue.
+1. Connect your device to a PC with **USB Debugging** enabled.
+2. Open a terminal (CMD / PowerShell / Bash) and run:
+   ```bash
+   adb logcat -d *:E > logcat_errors.txt
+   ```
+3. To search specifically for the crash reason, run:
+   ```bash
+   adb logcat -d | grep -i "AndroidRuntime" > crash_dump.txt
+   ```
+4. Share `logcat_errors.txt` or `crash_dump.txt` on the [XDA Thread](https://xdaforums.com/t/module-font-nastaliq-urdu-font.4645787/) or GitHub Issues.
+
+### 2. Common Causes of App Crashes
+* **Cache Issues**: If an app crashes immediately, it might be trying to render cached layouts with incorrect font metrics. 
+  * *Fix*: Go to `Settings > Apps > [Crashing App] > Storage` and tap **Clear Cache** (do NOT click Clear Data unless backed up).
+* **System Whitespace Bug (Android 15+)**: Older module versions had spaces inside the XML tags (e.g. `<font> NotoNastaliqUrdu-Regular.ttf </font>`). Android 15/16's strict XML parsers do not strip these spaces and fail to find the file, causing crashes. *This has been fixed in the latest release.*
+
+### 3. Emergency Recovery (Bootloop or SystemUI Crash)
+If your primary system language is Urdu and the font causes a crash loop, you won't be able to open Magisk/KernelSU manager to disable it. Use one of these recovery methods:
+
+#### Method A: Boot into Safe Mode (Easiest)
+1. Turn off your device.
+2. Power it on, and as soon as the boot animation starts, press and hold the **Volume Down** button until it finishes booting.
+3. Your phone will boot into **Safe Mode** (indicated by a "Safe Mode" watermark on the screen).
+4. Magisk and KernelSU automatically disable all modules in Safe Mode.
+5. Simply reboot your phone normally. The system will start up with modules disabled, allowing you to safely open Magisk/KernelSU and uninstall the font module.
+
+#### Method B: Remove via TWRP/OrangeFox (Recovery)
+If you have a custom recovery installed:
+1. Boot into recovery mode.
+2. Open **Advanced > Terminal** (or use `adb shell` from your PC).
+3. Run the following command to delete the module folder:
+   ```bash
+   rm -rf /data/adb/modules/Nastaliq_Urdu
+   ```
+4. Reboot to system.
+
+#### Method C: KernelSU Safe Mode Trigger
+If you are using KernelSU, you can force disable all modules during early boot by pressing the **Volume Down** key multiple times as soon as the device vibrates/power-on screen appears.
