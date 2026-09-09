@@ -10,17 +10,17 @@ Jameel Noori Nastaliq brings the elegance of traditional calligraphy to your And
 ### Installation
 ![Downloads](https://img.shields.io/github/downloads/Hassan-kareem/Nastaliq-Urdu_font/total.svg?style=plastic&label=Downloads)
 [![Telegram Channel](https://img.shields.io/badge/Join-Telegram-blue?style=plastic&logo=telegram)](https://t.me/HassansTechInsights)
+[![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-ff6b6b?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq_font/MehrNastaliq_Fix_By_Hassan_Karim.zip)
 [![Download Noori Kasheeda](https://img.shields.io/badge/Download-Noori%20Kasheeda-brightgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip)
 [![Download Noori Regular](https://img.shields.io/badge/Download-Noori%20Regular-darkgreen?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip)
-[![Download Mehr Nastaliq](https://img.shields.io/badge/Download-Mehr%20Nastaliq-ff6b6b?style=plastic&logo=github)](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/MehrNastaliq_font)
 [![XDA Thread](https://img.shields.io/badge/XDA%20Thread-Visit%20Now-green?style=plastic)](https://xdaforums.com/t/font-nastaliq-urdu-for-android.4647453/)
 
-1. **Download:** Obtain the latest zip from releases: [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip), [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/tag/MehrNastaliq_font).
+1. **Download:** Obtain the latest zip from releases: [Mehr Nastaliq](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/MehrNastaliq_font/MehrNastaliq_Fix_By_Hassan_Karim.zip), [Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Regular/JameelNoori-Regular.zip), [Kasheeda](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/releases/download/v1-Kasheeda/JameelNoori-Kasheeda.zip).
 2. **Install:** Install the downloaded .ttf file using [zFont](https://play.google.com/store/apps/details?id=com.htetznaing.zfont2) app.
    * You can search on YouTube <b>How to install custom font on "Your device or brand name"</b>.
 3. **Got an error?** Contact me on [Telegram](https://t.me/HassansTechInsights).
 
-#### Note: Choose between three variants: Kasheeda, Regular, and Mehr Nastaliq. See the Screenshots below. <br>
+#### Note: Choose between three variants: Mehr Nastaliq, Kasheeda, and Regular. See the Screenshots below. <br>
 * Regular <br>
 ![Noori-Regular](https://github.com/Hassan-kareem/Nastaliq-Urdu_font/assets/144518310/d15ad211-2005-4353-ba36-45cc905b065a)
 
